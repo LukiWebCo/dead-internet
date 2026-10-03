@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dead Internet Tracker</title>
+<meta name="description" content="How much of the new English-language news on the web is written by AI? Population-level estimates with confidence ranges, built on Common Crawl CC-NEWS.">
+<link rel="canonical" href="https://dead-internet.lukiwebco.com/">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+  <div class="wrap bar wide">
+    <a class="brand" href="./"><span class="brand-by">LukiWebCo</span> Dead Internet Tracker</a>
+    <nav aria-label="Main">
+      <a href="./" aria-current="page">Index</a>
+      <a href="about/">Method</a>
+    </nav>
+  </div>
+</header>
+<main id="main" class="wrap wide">
+<h1>How much of the new web is written by AI?</h1>
+<p class="lede">An independent, longitudinal dataset of AI-generated content in English-language news on the public web. Everything here is a <strong>population-level estimate with a confidence range</strong>, never a verdict on a single document. Data as of <time datetime="2026-10-03">2026-10-03</time> (UTC) &middot; methodology v1.1.</p>
+
+<div class="hero" role="group" aria-label="Headline figures">
+  <div>
+    <div class="stat-l">Word-shift index</div>
+    <div class="stat-v"><span class="nr">Baseline collecting</span></div>
+    <div class="stat-n">Needs 20 pre-2022-11 weeks; 0 so far</div>
+  </div>
+  <div>
+    <div class="stat-l">Leftover-phrase floor</div>
+    <div class="stat-v"><span class="nr">Baseline collecting</span></div>
+    <div class="stat-n">A floor: documents with unmistakable chatbot leftovers</div>
+  </div>
+  <div>
+    <div class="stat-l">Baseline documents</div>
+    <div class="stat-v"><span class="val">0</span></div>
+    <div class="stat-n">0 of 20 weeks needed, English news before 2022-11-01</div>
+  </div>
+  <div>
+    <div class="stat-l">Population</div>
+    <div class="stat-v"><span class="val">English</span></div>
+    <div class="stat-n">News sites in Common Crawl CC-NEWS; other languages in a later version</div>
+  </div>
+</div>
+
+<section id="soon">
+  <h2>What this page will show</h2>
+  <p class="hint">No numbers are shown until there is a real baseline. We are collecting English news from before ChatGPT (2022-11) to compare against.</p>
+  <ul>
+    <li><strong>Word-shift index:</strong> how much more often a documented list of words (10 style words from published studies) appears than in the pre-2022-11 baseline, with a 95% range. 1.00 means no change.</li>
+    <li><strong>Leftover-phrase floor:</strong> the share of documents that contain text such as &ldquo;As an AI language model&rdquo;. It is a minimum: most AI text has no such trace.</li>
+    <li><strong>Week by week</strong> for both, once the baseline holds 20 weeks and 10000 documents.</li>
+  </ul>
+</section>
+
+<section id="version">
+  <h2>Methodology and version</h2>
+  <p>Methodology <strong>v1.1</strong>. Documents come from Common Crawl CC-NEWS, sampled at random and kept with the exact location of the raw record. Estimates are population-level only; we do not label individual documents. <a href="about/">Read the method</a>.</p>
+</section>
+</main>
+<footer class="site">
+  <div class="wrap wide">
+    <p>Population-level estimates only; no individual document is labelled. <a href="about/">How this works</a></p>
+    <p>Updated 2026-10-03 (UTC). A <span class="brand-by">LukiWebCo</span> project.</p>
+  </div>
+</footer>
+</body>
+</html>

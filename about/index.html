@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Method | Dead Internet Tracker</title>
+<meta name="description" content="How much of the new English-language news on the web is written by AI? Population-level estimates with confidence ranges, built on Common Crawl CC-NEWS.">
+<link rel="canonical" href="https://dead-internet.lukiwebco.com/about/">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+  <div class="wrap bar">
+    <a class="brand" href="../"><span class="brand-by">LukiWebCo</span> Dead Internet Tracker</a>
+    <nav aria-label="Main">
+      <a href="../">Index</a>
+      <a href="../about/" aria-current="page">Method</a>
+    </nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+<h1>Method</h1>
+
+<section>
+  <h2>What is measured</h2>
+  <p>How much English-language news text published on the open web shows the fingerprints of AI writing, week by week, compared with news from before ChatGPT (before November 2022). The result is a trend for the whole population of sampled articles, with a 95% confidence range.</p>
+</section>
+
+<section id="sample">
+  <h2>Where the documents come from</h2>
+  <p>Common Crawl CC-NEWS, a public crawl of news sites. Each week we draw random pieces of its files, extract the article text, keep English documents with high language-detection confidence, and cap how many come from one site. The raw record location is stored with every document. The older weeks (back to 2019) are a smaller, separate &ldquo;retrospective&rdquo; sample, used only as the baseline and never mixed with the weekly data.</p>
+</section>
+
+<section id="signals">
+  <h2>The two numbers</h2>
+  <p><strong>Word-shift index.</strong> Studies of scientific writing found words that became much more common after ChatGPT, such as &ldquo;delve&rdquo;, &ldquo;underscore&rdquo; and &ldquo;intricate&rdquo; (Kobak et al., Science Advances 2025; Liang et al., ICML 2024). We count a fixed list of them and divide by the rate in the pre-2022-11 baseline. 1.00 means no change; the range comes from resampling the documents.</p>
+  <p><strong>Leftover-phrase floor.</strong> The share of documents containing text a person pasted without reading, such as &ldquo;As an AI language model&rdquo; or &ldquo;Regenerate response&rdquo;. It is a minimum. Most AI text has no such trace, so the true share is higher by an unknown amount.</p>
+</section>
+
+<section id="not-measured">
+  <h2>What is not measured</h2>
+  <ul>
+    <li><strong>No per-document verdicts.</strong> Detectors that label one article as &ldquo;AI&rdquo; or &ldquo;human&rdquo; make errors that fall on real writers, especially non-native English writers. Estimates for a whole population avoid that, so we publish none for single articles or sites.</li>
+    <li>The word list comes from science writing. Whether it shifts the same way in news is part of what is being measured, and models change their habits over time. A rising index means more of the shift, not a count of AI articles.</li>
+    <li>Other languages, and sites that are not news, are out of scope for this version.</li>
+    <li>Text that was edited by a person, or written by a model with a different style, is mostly invisible to both numbers.</li>
+  </ul>
+</section>
+
+<section id="versions">
+  <h2>Versions</h2>
+  <p>Methodology version in use: <strong>v1.1</strong>. Changes to sampling, language handling, text extraction, word lists or phrases each get a new version, and old documents can be re-analysed under a new one. Limits: text extraction is a simple heuristic, and CC-NEWS covers news-type sites, not the whole web.</p>
+</section>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <p>Population-level estimates only; no individual document is labelled. <a href="../about/">How this works</a></p>
+    <p>Updated 2026-10-03 (UTC). A <span class="brand-by">LukiWebCo</span> project.</p>
+  </div>
+</footer>
+</body>
+</html>
