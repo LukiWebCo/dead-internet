@@ -22,13 +22,13 @@
 </header>
 <main id="main" class="wrap wide">
 <h1>How much of the new web is written by AI?</h1>
-<p class="lede">An independent, longitudinal dataset of AI-generated content in English-language news on the public web. Everything here is a <strong>population-level estimate with a confidence range</strong>, never a verdict on a single document. Data as of <time datetime="2026-10-03">2026-10-03</time> (UTC) &middot; methodology v1.1.</p>
+<p class="lede">An independent, longitudinal dataset of AI-generated content in English-language news on the public web. Everything here is a <strong>population-level estimate with a confidence range</strong>, never a verdict on a single document. Data as of <time datetime="2026-10-06">2026-10-06</time> (UTC) &middot; methodology v1.2.</p>
 
 <div class="hero" role="group" aria-label="Headline figures">
   <div>
     <div class="stat-l">Word-shift index</div>
     <div class="stat-v"><span class="nr">Baseline collecting</span></div>
-    <div class="stat-n">Needs 20 pre-2022-11 weeks; 0 so far</div>
+    <div class="stat-n">Needs 20 pre-2022-11 weeks; 1 so far</div>
   </div>
   <div>
     <div class="stat-l">Leftover-phrase floor</div>
@@ -37,8 +37,8 @@
   </div>
   <div>
     <div class="stat-l">Baseline documents</div>
-    <div class="stat-v"><span class="val">0</span></div>
-    <div class="stat-n">0 of 20 weeks needed, English news before 2022-11-01</div>
+    <div class="stat-v"><span class="val">1202</span></div>
+    <div class="stat-n">1 of 20 weeks needed, English news before 2022-11-01; 273 more held out for validation</div>
   </div>
   <div>
     <div class="stat-l">Population</div>
@@ -47,11 +47,13 @@
   </div>
 </div>
 
+
 <section id="soon">
   <h2>What this page will show</h2>
   <p class="hint">No numbers are shown until there is a real baseline. We are collecting English news from before ChatGPT (2022-11) to compare against.</p>
   <ul>
     <li><strong>Word-shift index:</strong> how much more often a documented list of words (10 style words from published studies) appears than in the pre-2022-11 baseline, with a 95% range. 1.00 means no change.</li>
+    <li><strong>Drift band:</strong> how far the same index moved between 2019&ndash;20 and 2021&ndash;22, before ChatGPT. Shifts inside it can be topic or outlet change rather than AI.</li>
     <li><strong>Leftover-phrase floor:</strong> the share of documents that contain text such as &ldquo;As an AI language model&rdquo;. It is a minimum: most AI text has no such trace.</li>
     <li><strong>Week by week</strong> for both, once the baseline holds 20 weeks and 10000 documents.</li>
   </ul>
@@ -59,13 +61,13 @@
 
 <section id="version">
   <h2>Methodology and version</h2>
-  <p>Methodology <strong>v1.1</strong>. Documents come from Common Crawl CC-NEWS, sampled at random and kept with the exact location of the raw record. Estimates are population-level only; we do not label individual documents. <a href="about/">Read the method</a>.</p>
+  <p>Methodology <strong>v1.2</strong>. Documents come from Common Crawl CC-NEWS, sampled at random and kept with the exact location of the raw record. Estimates are population-level only; we do not label individual documents. <a href="about/">Read the method</a>.</p>
 </section>
 </main>
 <footer class="site">
   <div class="wrap wide">
     <p>Population-level estimates only; no individual document is labelled. <a href="about/">How this works</a></p>
-    <p>Updated 2026-10-03 (UTC). A <span class="brand-by">LukiWebCo</span> project.</p>
+    <p>Updated 2026-10-06 (UTC). A <span class="brand-by">LukiWebCo</span> project.</p>
   </div>
 </footer>
 </body>

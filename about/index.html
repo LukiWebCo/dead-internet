@@ -31,11 +31,14 @@
 <section id="sample">
   <h2>Where the documents come from</h2>
   <p>Common Crawl CC-NEWS, a public crawl of news sites. Each week we draw random pieces of its files, extract the article text, keep English documents with high language-detection confidence, and cap how many come from one site. The raw record location is stored with every document. The older weeks (back to 2019) are a smaller, separate &ldquo;retrospective&rdquo; sample, used only as the baseline and never mixed with the weekly data.</p>
+  <p>To show the years since ChatGPT, we also sample one week per month from December 2022 onwards (the week that holds the 15th), 2,000 documents each, from the same archive with the same method. This monthly series is shown separately from the weekly data, which has 10,000 documents a week and narrower ranges.</p>
 </section>
 
 <section id="signals">
   <h2>The two numbers</h2>
   <p><strong>Word-shift index.</strong> Studies of scientific writing found words that became much more common after ChatGPT, such as &ldquo;delve&rdquo;, &ldquo;underscore&rdquo; and &ldquo;intricate&rdquo; (Kobak et al., Science Advances 2025; Liang et al., ICML 2024). We count a fixed list of them and divide by the rate in the pre-2022-11 baseline. 1.00 means no change; the range comes from resampling the documents.</p>
+  <p><strong>Drift band.</strong> The 95% range only covers sampling error. News vocabulary also drifts with topics and outlets. To measure that, we score 2021 and early 2022 against 2019&ndash;20 as if they were new weeks; there was no ChatGPT then, so any shift is drift. The largest shift seen is the drift band, shown next to the index.</p>
+  <p><strong>Held-out check.</strong> One document in five from before November 2022, chosen by a fixed hash of its record ID, is never used in the baseline. It is scored like a new week and must show no shift; the result is published with each methodology version.</p>
   <p><strong>Leftover-phrase floor.</strong> The share of documents containing text a person pasted without reading, such as &ldquo;As an AI language model&rdquo; or &ldquo;Regenerate response&rdquo;. It is a minimum. Most AI text has no such trace, so the true share is higher by an unknown amount.</p>
 </section>
 
@@ -51,13 +54,13 @@
 
 <section id="versions">
   <h2>Versions</h2>
-  <p>Methodology version in use: <strong>v1.1</strong>. Changes to sampling, language handling, text extraction, word lists or phrases each get a new version, and old documents can be re-analysed under a new one. Limits: text extraction is a simple heuristic, and CC-NEWS covers news-type sites, not the whole web.</p>
+  <p>Methodology version in use: <strong>v1.2</strong>. Changes to sampling, language handling, text extraction, word lists or phrases each get a new version, and old documents can be re-analysed under a new one. Limits: text extraction is a simple heuristic, and CC-NEWS covers news-type sites, not the whole web.</p>
 </section>
 </main>
 <footer class="site">
   <div class="wrap">
     <p>Population-level estimates only; no individual document is labelled. <a href="../about/">How this works</a></p>
-    <p>Updated 2026-10-03 (UTC). A <span class="brand-by">LukiWebCo</span> project.</p>
+    <p>Updated 2026-10-06 (UTC). A <span class="brand-by">LukiWebCo</span> project.</p>
   </div>
 </footer>
 </body>
