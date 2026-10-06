@@ -27,18 +27,19 @@
 <div class="hero" role="group" aria-label="Headline figures">
   <div>
     <div class="stat-l">Word-shift index</div>
-    <div class="stat-v"><span class="nr">Baseline collecting</span></div>
-    <div class="stat-n">Needs 20 pre-2022-11 weeks; 1 so far</div>
+    <div class="stat-v"><span class="val">0.63&times;</span></div>
+    <div class="stat-n">95% range 0.52 to 0.74 &middot; week of 2026-09-28 vs. the pre-ChatGPT baseline (1.00 = no shift)</div>
+    <div class="stat-n">Drift band not measured yet (0 of 8 placebo periods)</div>
   </div>
   <div>
     <div class="stat-l">Leftover-phrase floor</div>
-    <div class="stat-v"><span class="nr">Baseline collecting</span></div>
-    <div class="stat-n">A floor: documents with unmistakable chatbot leftovers</div>
+    <div class="stat-v"><span class="val">&ge; 0.00%</span></div>
+    <div class="stat-n">of documents, 95% range 0.00% to 0.16% &middot; a minimum, not an estimate of the total</div>
   </div>
   <div>
     <div class="stat-l">Baseline documents</div>
-    <div class="stat-v"><span class="val">1202</span></div>
-    <div class="stat-n">1 of 20 weeks needed, English news before 2022-11-01; 273 more held out for validation</div>
+    <div class="stat-v"><span class="val">32044</span></div>
+    <div class="stat-n">20 of 20 weeks needed, English news before 2022-11-01; 7956 more held out for validation</div>
   </div>
   <div>
     <div class="stat-l">Population</div>
@@ -47,16 +48,42 @@
   </div>
 </div>
 
+<section id="trend">
+  <h2>Since ChatGPT</h2>
+  <p class="hint">Word-shift index for one week per month since 2022-12 (circles, 2,000 documents each, collected after the fact from the CC-NEWS archive) and for each week collected as it happens (squares, 10,000 documents). Lines through each mark are 95% ranges; the dashed line at 1.00 is the pre-ChatGPT baseline. Hover a mark for its numbers.</p>
+  <figure class="chartfig">
+    <svg class="chart" viewBox="0 0 600 280" role="img" aria-labelledby="chart-t"><title id="chart-t">Word-shift index over time, with 95% ranges; 1.00 is the pre-ChatGPT baseline</title><line class="grid" x1="44" x2="588" y1="248.0" y2="248.0"/><text class="tick" x="38" y="252.0" text-anchor="end">0.50</text><line class="grid" x1="44" x2="588" y1="208.7" y2="208.7"/><text class="tick" x="38" y="212.7" text-anchor="end">0.60</text><line class="grid" x1="44" x2="588" y1="169.3" y2="169.3"/><text class="tick" x="38" y="173.3" text-anchor="end">0.70</text><line class="grid" x1="44" x2="588" y1="130.0" y2="130.0"/><text class="tick" x="38" y="134.0" text-anchor="end">0.80</text><line class="grid" x1="44" x2="588" y1="90.7" y2="90.7"/><text class="tick" x="38" y="94.7" text-anchor="end">0.90</text><line class="grid" x1="44" x2="588" y1="51.3" y2="51.3"/><text class="tick" x="38" y="55.3" text-anchor="end">1.00</text><line class="grid" x1="44" x2="588" y1="12.0" y2="12.0"/><text class="tick" x="38" y="16.0" text-anchor="end">1.10</text><line class="ref" x1="44" x2="588" y1="51.3" y2="51.3"/><line class="grid" x1="68.1" x2="68.1" y1="12" y2="248"/><text class="tick" x="68.1" y="266" text-anchor="middle">2023</text><line class="grid" x1="203.7" x2="203.7" y1="12" y2="248"/><text class="tick" x="203.7" y="266" text-anchor="middle">2024</text><line class="grid" x1="339.6" x2="339.6" y1="12" y2="248"/><text class="tick" x="339.6" y="266" text-anchor="middle">2025</text><line class="grid" x1="475.1" x2="475.1" y1="12" y2="248"/><text class="tick" x="475.1" y="266" text-anchor="middle">2026</text><g class="mk"><title>2026-W40 (week of 2026-09-28, weekly): 0.63&#215;, 95% range 0.52 to 0.74; 2,360 documents</title><circle class="hit" cx="575.4" cy="198.8" r="11"/><line class="ci" x1="575.4" x2="575.4" y1="153.5" y2="241.7"/><rect class="pt" x="570.9" y="194.3" width="9" height="9" rx="1.5"/></g></svg>
+    <figcaption class="legend"><span class="key"><svg width="12" height="12" aria-hidden="true"><circle class="pt" cx="6" cy="6" r="4"/></svg> Monthly sample</span> <span class="key"><svg width="12" height="12" aria-hidden="true"><rect class="pt" x="1.5" y="1.5" width="9" height="9" rx="1.5"/></svg> Weekly</span> <span class="key"><svg width="18" height="12" aria-hidden="true"><line class="ref" x1="0" x2="18" y1="6" y2="6"/></svg> Baseline (1.00)</span></figcaption>
+  </figure>
+</section>
+<style>
+.chartfig{margin:1rem 0}
+.chart{width:100%;height:auto;display:block;color:var(--ink)}
+.chart .grid{stroke:var(--rule-soft);stroke-width:1}
+.chart .tick{fill:currentColor;opacity:.7;font-size:13px}
+.chart .ref,.legend .ref{stroke:var(--ink);stroke-width:1.5;stroke-dasharray:5 4;opacity:.6}
+.chart .band{fill:var(--rule);opacity:.45}
+.chart .line{fill:none;stroke:var(--link);stroke-width:2;opacity:.55}
+.chart .ci{stroke:var(--link);stroke-width:2;opacity:.45}
+.chart .pt,.legend .pt{fill:var(--link);stroke:var(--bg);stroke-width:2}
+.chart .hit{fill:transparent}
+.chart .mk:hover .pt{stroke:var(--ink)}
+.legend{display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;font-size:.9rem;margin-top:.4rem}
+.legend .key{display:inline-flex;align-items:center;gap:.35rem}
+</style>
 
-<section id="soon">
-  <h2>What this page will show</h2>
-  <p class="hint">No numbers are shown until there is a real baseline. We are collecting English news from before ChatGPT (2022-11) to compare against.</p>
-  <ul>
-    <li><strong>Word-shift index:</strong> how much more often a documented list of words (10 style words from published studies) appears than in the pre-2022-11 baseline, with a 95% range. 1.00 means no change.</li>
-    <li><strong>Drift band:</strong> how far the same index moved between 2019&ndash;20 and 2021&ndash;22, before ChatGPT. Shifts inside it can be topic or outlet change rather than AI.</li>
-    <li><strong>Leftover-phrase floor:</strong> the share of documents that contain text such as &ldquo;As an AI language model&rdquo;. It is a minimum: most AI text has no such trace.</li>
-    <li><strong>Week by week</strong> for both, once the baseline holds 20 weeks and 10000 documents.</li>
-  </ul>
+<section id="weeks">
+  <h2>Week by week</h2>
+  <p class="hint">Each row is one prospective week. Both columns are population-level estimates with 95% ranges. The index compares the rate of a documented list of words that rose after ChatGPT with the pre-2022-11 baseline; the floor counts documents containing unmistakable chatbot leftovers. The drift band (how much the index moved before ChatGPT) is not measured yet, so read small shifts with care.</p>
+  <div class="tablewrap" role="region" aria-label="Weekly estimates" tabindex="0">
+  <table class="plain">
+    <caption class="sr">Weekly word-shift index and leftover-phrase floor</caption>
+    <thead><tr><th scope="col">Week</th><th scope="col" class="num">Documents</th><th scope="col" class="num">Word-shift index</th><th scope="col" class="num">Leftover floor</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">2026-W40 <span class="asof">2026-09-28</span></th><td class="num">2360</td><td class="num">0.63&times; (0.52&ndash;0.74)</td><td class="num">&ge; 0.00% (0.00%&ndash;0.16%)</td></tr>
+    </tbody>
+  </table>
+  </div>
 </section>
 
 <section id="version">
