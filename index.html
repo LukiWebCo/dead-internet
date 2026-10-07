@@ -6,6 +6,14 @@
 <title>Dead Internet Tracker</title>
 <meta name="description" content="How much of the new English-language news on the web is written by AI? Population-level estimates with confidence ranges, built on Common Crawl CC-NEWS.">
 <link rel="canonical" href="https://dead-internet.lukiwebco.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Dead Internet Tracker">
+<meta property="og:description" content="How much of the new English-language news on the web is written by AI? Population-level estimates with confidence ranges, built on Common Crawl CC-NEWS.">
+<meta property="og:url" content="https://dead-internet.lukiwebco.com/">
+<meta property="og:image" content="https://dead-internet.lukiwebco.com/share.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:,">
 <link rel="stylesheet" href="static/style.css">
 </head>
@@ -22,24 +30,25 @@
 </header>
 <main id="main" class="wrap wide">
 <h1>How much of the new web is written by AI?</h1>
-<p class="lede">An independent, longitudinal dataset of AI-generated content in English-language news on the public web. Everything here is a <strong>population-level estimate with a confidence range</strong>, never a verdict on a single document. Data as of <time datetime="2026-10-06">2026-10-06</time> (UTC) &middot; methodology v1.2.</p>
+<p class="lede">An independent, longitudinal dataset of AI-generated content in English-language news on the public web. Everything here is a <strong>population-level estimate with a confidence range</strong>, never a verdict on a single document. Data as of <time datetime="2026-10-07">2026-10-07</time> (UTC) &middot; methodology v1.2.</p>
+<p class="lede"><strong>AI-style vocabulary in English news peaked at 1.74&times; its pre-ChatGPT level in December 2023 and is now 0.61&times; its pre-ChatGPT level (September 2026, 95% range 0.50&ndash;0.73).</strong> A falling index does not by itself mean less AI writing: these words come from 2023&ndash;24 studies, and newer models use some of them less. The common-word list and the drift band help tell the two apart.</p>
 
 <div class="hero" role="group" aria-label="Headline figures">
   <div>
-    <div class="stat-l">Word-shift index</div>
+    <div class="stat-l">Word-shift index, latest week</div>
     <div class="stat-v"><span class="val">0.61&times;</span></div>
     <div class="stat-n">95% range 0.50 to 0.73 &middot; week of 2026-09-28 vs. the pre-ChatGPT baseline (1.00 = no shift)</div>
     <div class="stat-n">Drift band not measured yet (0 of 8 placebo periods)</div>
   </div>
   <div>
-    <div class="stat-l">Leftover-phrase floor</div>
-    <div class="stat-v"><span class="val">&ge; 0.00%</span></div>
-    <div class="stat-n">of documents, 95% range 0.00% to 0.16% &middot; a minimum, not an estimate of the total</div>
+    <div class="stat-l">Unedited chatbot leftovers</div>
+    <div class="stat-v"><span class="val">0 of 8,360</span></div>
+    <div class="stat-n">articles since 2022-12 contain text like &ldquo;As an AI language model&rdquo; (95% range 0.00% to 0.05%). A minimum: most AI text leaves no such trace.</div>
   </div>
   <div>
-    <div class="stat-l">Baseline documents</div>
-    <div class="stat-v"><span class="val">33646</span></div>
-    <div class="stat-n">21 of 20 weeks needed, English news before 2022-11-01; 8354 more held out for validation</div>
+    <div class="stat-l">False-alarm check</div>
+    <div class="stat-v"><span class="val">1.02&times;</span></div>
+    <div class="stat-n">8,354 pre-ChatGPT articles kept out of the baseline score 0.93 to 1.12; the range contains 1.00, so the method finds no shift where there is none</div>
   </div>
   <div>
     <div class="stat-l">Population</div>
@@ -50,40 +59,51 @@
 
 <section id="trend">
   <h2>Since ChatGPT</h2>
-  <p class="hint">Word-shift index for one week per month since 2022-12 (circles, 2,000 documents each, collected after the fact from the CC-NEWS archive) and for each week collected as it happens (squares, 10,000 documents). Lines through each mark are 95% ranges; the dashed line at 1.00 is the pre-ChatGPT baseline. Hover a mark for its numbers.</p>
+  <p class="hint">How often two lists of words appear compared with English news before ChatGPT (1.00, dashed line). <strong>Science-study words</strong> (&ldquo;delve&rdquo;, &ldquo;intricate&rdquo;, &ldquo;showcase&rdquo;&hellip;) are the ones published studies found most over-used by ChatGPT; <strong>common words</strong> (&ldquo;crucial&rdquo;, &ldquo;insight&rdquo;, &ldquo;significant&rdquo;&hellip;) rose in the same studies but are also everyday news vocabulary. Circles: one week per month since 2022-12 (2,000 articles each, from the CC-NEWS archive). Squares: weeks collected as they happen (3,000 articles). Lines through each mark are 95% ranges. Hover a mark for its numbers.</p>
   <figure class="chartfig">
-    <svg class="chart" viewBox="0 0 600 280" role="img" aria-labelledby="chart-t"><title id="chart-t">Word-shift index over time, with 95% ranges; 1.00 is the pre-ChatGPT baseline</title><line class="grid" x1="44" x2="588" y1="248.0" y2="248.0"/><text class="tick" x="38" y="252.0" text-anchor="end">0.50</text><line class="grid" x1="44" x2="588" y1="189.0" y2="189.0"/><text class="tick" x="38" y="193.0" text-anchor="end">1.00</text><line class="grid" x1="44" x2="588" y1="130.0" y2="130.0"/><text class="tick" x="38" y="134.0" text-anchor="end">1.50</text><line class="grid" x1="44" x2="588" y1="71.0" y2="71.0"/><text class="tick" x="38" y="75.0" text-anchor="end">2.00</text><line class="grid" x1="44" x2="588" y1="12.0" y2="12.0"/><text class="tick" x="38" y="16.0" text-anchor="end">2.50</text><line class="ref" x1="44" x2="588" y1="189.0" y2="189.0"/><line class="grid" x1="68.1" x2="68.1" y1="12" y2="248"/><text class="tick" x="68.1" y="266" text-anchor="middle">2023</text><line class="grid" x1="203.7" x2="203.7" y1="12" y2="248"/><text class="tick" x="203.7" y="266" text-anchor="middle">2024</text><line class="grid" x1="339.6" x2="339.6" y1="12" y2="248"/><text class="tick" x="339.6" y="266" text-anchor="middle">2025</text><line class="grid" x1="475.1" x2="475.1" y1="12" y2="248"/><text class="tick" x="475.1" y="266" text-anchor="middle">2026</text><path class="line" d="M60.7,208.1 L128.3,196.4 L195.9,101.5"/><g class="mk"><title>2022-W50 (week of 2022-12-12, monthly sample): 0.84&#215;, 95% range 0.68 to 1.00; 2,000 documents</title><circle class="hit" cx="60.7" cy="208.1" r="11"/><line class="ci" x1="60.7" x2="60.7" y1="188.4" y2="226.5"/><circle class="pt" cx="60.7" cy="208.1" r="4"/></g><g class="mk"><title>2023-W24 (week of 2023-06-12, monthly sample): 0.94&#215;, 95% range 0.79 to 1.10; 2,000 documents</title><circle class="hit" cx="128.3" cy="196.4" r="11"/><line class="ci" x1="128.3" x2="128.3" y1="177.3" y2="213.7"/><circle class="pt" cx="128.3" cy="196.4" r="4"/></g><g class="mk"><title>2023-W50 (week of 2023-12-11, monthly sample): 1.74&#215;, 95% range 1.50 to 2.01; 2,000 documents</title><circle class="hit" cx="195.9" cy="101.5" r="11"/><line class="ci" x1="195.9" x2="195.9" y1="70.0" y2="130.1"/><circle class="pt" cx="195.9" cy="101.5" r="4"/></g><g class="mk"><title>2026-W40 (week of 2026-09-28, weekly): 0.61&#215;, 95% range 0.50 to 0.73; 2,360 documents</title><circle class="hit" cx="575.4" cy="234.7" r="11"/><line class="ci" x1="575.4" x2="575.4" y1="220.8" y2="247.5"/><rect class="pt" x="570.9" y="230.2" width="9" height="9" rx="1.5"/></g></svg>
-    <figcaption class="legend"><span class="key"><svg width="12" height="12" aria-hidden="true"><circle class="pt" cx="6" cy="6" r="4"/></svg> Monthly sample</span> <span class="key"><svg width="12" height="12" aria-hidden="true"><rect class="pt" x="1.5" y="1.5" width="9" height="9" rx="1.5"/></svg> Weekly</span> <span class="key"><svg width="18" height="12" aria-hidden="true"><line class="ref" x1="0" x2="18" y1="6" y2="6"/></svg> Baseline (1.00)</span></figcaption>
+    <svg class="chart" viewBox="0 0 600 280" role="img" aria-labelledby="chart-t"><title id="chart-t">Word-shift index over time for two word lists, with 95% ranges; 1.00 is the pre-ChatGPT baseline</title><line class="grid" x1="44" x2="508" y1="248.0" y2="248.0"/><text class="tick" x="38" y="252.0" text-anchor="end">0.50</text><line class="grid" x1="44" x2="508" y1="189.0" y2="189.0"/><text class="tick" x="38" y="193.0" text-anchor="end">1.00</text><line class="grid" x1="44" x2="508" y1="130.0" y2="130.0"/><text class="tick" x="38" y="134.0" text-anchor="end">1.50</text><line class="grid" x1="44" x2="508" y1="71.0" y2="71.0"/><text class="tick" x="38" y="75.0" text-anchor="end">2.00</text><line class="grid" x1="44" x2="508" y1="12.0" y2="12.0"/><text class="tick" x="38" y="16.0" text-anchor="end">2.50</text><line class="ref" x1="44" x2="508" y1="189.0" y2="189.0"/><line class="grid" x1="64.6" x2="64.6" y1="12" y2="248"/><text class="tick" x="64.6" y="266" text-anchor="middle">2023</text><line class="grid" x1="180.2" x2="180.2" y1="12" y2="248"/><text class="tick" x="180.2" y="266" text-anchor="middle">2024</text><line class="grid" x1="296.1" x2="296.1" y1="12" y2="248"/><text class="tick" x="296.1" y="266" text-anchor="middle">2025</text><line class="grid" x1="411.7" x2="411.7" y1="12" y2="248"/><text class="tick" x="411.7" y="266" text-anchor="middle">2026</text><path class="line c1" d="M58.3,208.1 L115.9,196.4 L173.5,101.5"/><g class="mk"><title>Science-study words, 2022-W50 (week of 2022-12-12, monthly sample): 0.84&#215;, 95% range 0.68 to 1.00; 2,000 documents</title><circle class="hit" cx="58.3" cy="208.1" r="11"/><line class="ci c1" x1="58.3" x2="58.3" y1="188.4" y2="226.5"/><circle class="pt c1" cx="58.3" cy="208.1" r="4"/></g><g class="mk"><title>Science-study words, 2023-W24 (week of 2023-06-12, monthly sample): 0.94&#215;, 95% range 0.79 to 1.10; 2,000 documents</title><circle class="hit" cx="115.9" cy="196.4" r="11"/><line class="ci c1" x1="115.9" x2="115.9" y1="177.3" y2="213.7"/><circle class="pt c1" cx="115.9" cy="196.4" r="4"/></g><g class="mk"><title>Science-study words, 2023-W50 (week of 2023-12-11, monthly sample): 1.74&#215;, 95% range 1.50 to 2.01; 2,000 documents</title><circle class="hit" cx="173.5" cy="101.5" r="11"/><line class="ci c1" x1="173.5" x2="173.5" y1="70.0" y2="130.1"/><circle class="pt c1" cx="173.5" cy="101.5" r="4"/></g><g class="mk"><title>Science-study words, 2026-W40 (week of 2026-09-28, weekly): 0.61&#215;, 95% range 0.50 to 0.73; 2,360 documents</title><circle class="hit" cx="497.2" cy="234.7" r="11"/><line class="ci c1" x1="497.2" x2="497.2" y1="220.8" y2="247.5"/><rect class="pt c1" x="492.7" y="230.2" width="9" height="9" rx="1.5"/></g><path class="line c2" d="M58.3,197.4 L115.9,185.2 L173.5,144.6"/><g class="mk"><title>Common words, 2022-W50 (week of 2022-12-12, monthly sample): 0.93&#215;, 95% range 0.84 to 1.02; 2,000 documents</title><circle class="hit" cx="58.3" cy="197.4" r="11"/><line class="ci c2" x1="58.3" x2="58.3" y1="186.5" y2="208.3"/><circle class="pt c2" cx="58.3" cy="197.4" r="4"/></g><g class="mk"><title>Common words, 2023-W24 (week of 2023-06-12, monthly sample): 1.03&#215;, 95% range 0.93 to 1.15; 2,000 documents</title><circle class="hit" cx="115.9" cy="185.2" r="11"/><line class="ci c2" x1="115.9" x2="115.9" y1="171.6" y2="197.7"/><circle class="pt c2" cx="115.9" cy="185.2" r="4"/></g><g class="mk"><title>Common words, 2023-W50 (week of 2023-12-11, monthly sample): 1.38&#215;, 95% range 1.26 to 1.50; 2,000 documents</title><circle class="hit" cx="173.5" cy="144.6" r="11"/><line class="ci c2" x1="173.5" x2="173.5" y1="130.1" y2="158.7"/><circle class="pt c2" cx="173.5" cy="144.6" r="4"/></g><g class="mk"><title>Common words, 2026-W40 (week of 2026-09-28, weekly): 1.15&#215;, 95% range 1.05 to 1.24; 2,360 documents</title><circle class="hit" cx="497.2" cy="171.7" r="11"/><line class="ci c2" x1="497.2" x2="497.2" y1="160.6" y2="182.8"/><rect class="pt c2" x="492.7" y="167.2" width="9" height="9" rx="1.5"/></g><text class="dlabel" x="516" y="175.7">Common</text><text class="dlabel" x="516" y="238.7">Science</text></svg>
+    <figcaption class="legend"><span class="key"><svg width="12" height="12" aria-hidden="true"><circle class="pt c1" cx="6" cy="6" r="5"/></svg> Science-study words</span> <span class="key"><svg width="12" height="12" aria-hidden="true"><circle class="pt c2" cx="6" cy="6" r="5"/></svg> Common words</span> <span class="key"><svg width="12" height="12" aria-hidden="true"><circle class="pt" cx="6" cy="6" r="4"/></svg> Monthly sample</span> <span class="key"><svg width="12" height="12" aria-hidden="true"><rect class="pt" x="1.5" y="1.5" width="9" height="9" rx="1.5"/></svg> Weekly</span> <span class="key"><svg width="18" height="12" aria-hidden="true"><line class="ref" x1="0" x2="18" y1="6" y2="6"/></svg> Baseline (1.00)</span></figcaption>
   </figure>
   <details>
   <summary>Month by month (table)</summary>
   <div class="tablewrap" role="region" aria-label="Monthly estimates" tabindex="0">
   <table class="plain">
     <caption class="sr">Monthly word-shift index and leftover-phrase floor</caption>
-    <thead><tr><th scope="col">Week</th><th scope="col" class="num">Documents</th><th scope="col" class="num">Word-shift index</th><th scope="col" class="num">Leftover floor</th></tr></thead>
+    <thead><tr><th scope="col">Week</th><th scope="col" class="num">Documents</th><th scope="col" class="num">Science-study words</th><th scope="col" class="num">Common words</th><th scope="col" class="num">Leftover floor</th></tr></thead>
     <tbody>
-      <tr><th scope="row">2023-W50 <span class="asof">2023-12-11</span></th><td class="num">2000</td><td class="num">1.74&times; (1.50&ndash;2.01)</td><td class="num">&ge; 0.00% (0.00%&ndash;0.19%)</td></tr>
-      <tr><th scope="row">2023-W24 <span class="asof">2023-06-12</span></th><td class="num">2000</td><td class="num">0.94&times; (0.79&ndash;1.10)</td><td class="num">&ge; 0.00% (0.00%&ndash;0.19%)</td></tr>
-      <tr><th scope="row">2022-W50 <span class="asof">2022-12-12</span></th><td class="num">2000</td><td class="num">0.84&times; (0.68&ndash;1.00)</td><td class="num">&ge; 0.00% (0.00%&ndash;0.19%)</td></tr>
+      <tr><th scope="row">2023-W50 <span class="asof">2023-12-11</span></th><td class="num">2000</td><td class="num">1.74&times; (1.50&ndash;2.01)</td><td class="num">1.38&times; (1.26&ndash;1.50)</td><td class="num">&ge; 0.00% (0.00%&ndash;0.19%)</td></tr>
+      <tr><th scope="row">2023-W24 <span class="asof">2023-06-12</span></th><td class="num">2000</td><td class="num">0.94&times; (0.79&ndash;1.10)</td><td class="num">1.03&times; (0.93&ndash;1.15)</td><td class="num">&ge; 0.00% (0.00%&ndash;0.19%)</td></tr>
+      <tr><th scope="row">2022-W50 <span class="asof">2022-12-12</span></th><td class="num">2000</td><td class="num">0.84&times; (0.68&ndash;1.00)</td><td class="num">0.93&times; (0.84&ndash;1.02)</td><td class="num">&ge; 0.00% (0.00%&ndash;0.19%)</td></tr>
     </tbody>
   </table>
   </div>
   </details>
 </section>
 <style>
+:root{--c1:#1b4f9c;--c2:#8a4b0f}
+@media (prefers-color-scheme: dark){:root{--c1:#5a8ad8;--c2:#c97a35}}
 .chartfig{margin:1rem 0}
 .chart{width:100%;height:auto;display:block;color:var(--ink)}
+
 .chart .grid{stroke:var(--rule-soft);stroke-width:1}
-.chart .tick{fill:currentColor;opacity:.7;font-size:13px}
-.chart .ref,.legend .ref{stroke:var(--ink);stroke-width:1.5;stroke-dasharray:5 4;opacity:.6}
+.chart .tick,.chart .dlabel{fill:currentColor;font-size:13px}
+.chart .tick{opacity:.7}
+.chart .ref{stroke:var(--ink);stroke-width:1.5;stroke-dasharray:5 4;opacity:.6}
 .chart .band{fill:var(--rule);opacity:.45}
-.chart .line{fill:none;stroke:var(--link);stroke-width:2;opacity:.55}
-.chart .ci{stroke:var(--link);stroke-width:2;opacity:.45}
-.chart .pt,.legend .pt{fill:var(--link);stroke:var(--bg);stroke-width:2}
+.chart .line{fill:none;stroke-width:2;opacity:.6}
+.chart .ci{stroke-width:2;opacity:.45}
+.chart .pt{stroke:var(--bg);stroke-width:2}
+.chart .c1{stroke:var(--c1)} .chart .pt.c1{fill:var(--c1);stroke:var(--bg)}
+.chart .c2{stroke:var(--c2)} .chart .pt.c2{fill:var(--c2);stroke:var(--bg)}
 .chart .hit{fill:transparent}
+
 .chart .mk:hover .pt{stroke:var(--ink)}
 .legend{display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;font-size:.9rem;margin-top:.4rem}
 .legend .key{display:inline-flex;align-items:center;gap:.35rem}
+.legend .pt{fill:var(--ink);opacity:.75}
+.legend .pt.c1{fill:var(--c1);opacity:1}
+.legend .pt.c2{fill:var(--c2);opacity:1}
+.legend .ref{stroke:var(--ink);stroke-width:1.5;stroke-dasharray:5 4;opacity:.6}
 </style>
 
 <section id="weeks">
@@ -100,6 +120,11 @@
   </div>
 </section>
 
+<section id="data">
+  <h2>Download the data</h2>
+  <p>Every published week, both word lists and the leftover floor with their 95% ranges: <a href="data/weeks.csv">weeks.csv</a>. The full summary behind this page, including the baseline, drift band and false-alarm check: <a href="data/summary.json">summary.json</a>. Free to reuse with credit to the LukiWebCo Dead Internet Tracker; please cite the methodology version.</p>
+</section>
+
 <section id="version">
   <h2>Methodology and version</h2>
   <p>Methodology <strong>v1.2</strong>. Documents come from Common Crawl CC-NEWS, sampled at random and kept with the exact location of the raw record. Estimates are population-level only; we do not label individual documents. <a href="about/">Read the method</a>.</p>
@@ -108,7 +133,7 @@
 <footer class="site">
   <div class="wrap wide">
     <p>Population-level estimates only; no individual document is labelled. <a href="about/">How this works</a></p>
-    <p>Updated 2026-10-06 (UTC). A <span class="brand-by">LukiWebCo</span> project.</p>
+    <p>Updated 2026-10-07 (UTC). A <span class="brand-by">LukiWebCo</span> project.</p>
   </div>
 </footer>
 </body>

@@ -1,0 +1,383 @@
+{
+ "signals": {
+  "baseline": {
+   "docs": 33646,
+   "end": "2022-11-01",
+   "held_out": 8354,
+   "leftover": {
+    "docs": 0,
+    "hi": 0.00011415979139129385,
+    "lo": 0.0,
+    "n": 33646,
+    "share": 0.0
+   },
+   "need_docs": 10000,
+   "need_weeks": 20,
+   "ready": true,
+   "split_rule": "sha256(doc_id) mod 5 == 0 -> validation (20%), else fit; doc_id = sha256(WARC-Record-ID)[:32]",
+   "target_total": 12500,
+   "unmapped": 0,
+   "weeks": 21
+  },
+  "drift_band": {
+   "band": null,
+   "band_common": null,
+   "base_docs": 0,
+   "base_years": "2019-2020",
+   "need_base_docs": 10000,
+   "need_period_docs": 5000,
+   "periods": [
+    {
+     "n": 0,
+     "period": "2021Q1"
+    },
+    {
+     "n": 0,
+     "period": "2021Q2"
+    },
+    {
+     "n": 0,
+     "period": "2021Q3"
+    },
+    {
+     "n": 0,
+     "period": "2021Q4"
+    },
+    {
+     "n": 0,
+     "period": "2022Q1"
+    },
+    {
+     "n": 6422,
+     "period": "2022Q2"
+    },
+    {
+     "n": 20810,
+     "period": "2022Q3"
+    },
+    {
+     "n": 6414,
+     "period": "2022-10"
+    }
+   ],
+   "periods_ready": 0,
+   "ready": false
+  },
+  "generated_at": "2026-10-07T00:08:23Z",
+  "latest": {
+   "leftover": {
+    "docs": 0,
+    "hi": 0.0016250915926967438,
+    "lo": 0.0,
+    "n": 2360,
+    "share": 0.0
+   },
+   "n": 2360,
+   "start": "2026-09-28",
+   "week": "2026-W40",
+   "word_shift": {
+    "baseline_rate_per_10k": 2.176711548551154,
+    "hi": 0.7304810520975141,
+    "index": 0.6126182393989652,
+    "lo": 0.5044804997326879,
+    "rate_per_10k": 1.3334931965528032
+   },
+   "word_shift_common": {
+    "baseline_rate_per_10k": 8.79976785217189,
+    "hi": 1.240299172879049,
+    "index": 1.1464994258023111,
+    "lo": 1.0524522358053405,
+    "rate_per_10k": 10.088928789708708
+   }
+  },
+  "leftover_phrases": [
+   "as_an_ai_language_model",
+   "regenerate_response",
+   "knowledge_cutoff",
+   "certainly_here",
+   "cannot_fulfill",
+   "openai_policy"
+  ],
+  "leftover_pooled": {
+   "docs": 0,
+   "hi": 0.00045929360332588295,
+   "lo": 0.0,
+   "n": 8360,
+   "share": 0.0,
+   "weeks": 4
+  },
+  "methodology_version": "v1.2",
+  "series": [
+   {
+    "leftover": {
+     "docs": 0,
+     "hi": 0.001917047311437806,
+     "lo": 1.0842021724855044e-19,
+     "n": 2000,
+     "share": 0.0
+    },
+    "n": 2000,
+    "start": "2022-12-12",
+    "week": "2022-W50",
+    "word_shift": {
+     "baseline_rate_per_10k": 2.176711548551154,
+     "hi": 1.0047730481210677,
+     "index": 0.8382224476878827,
+     "lo": 0.6823194780890427,
+     "rate_per_10k": 1.8245684821370296
+    },
+    "word_shift_common": {
+     "baseline_rate_per_10k": 8.79976785217189,
+     "hi": 1.0210622604607709,
+     "index": 0.9288283033912801,
+     "lo": 0.8362136770432833,
+     "rate_per_10k": 8.173473444369945
+    }
+   },
+   {
+    "leftover": {
+     "docs": 0,
+     "hi": 0.001917047311437806,
+     "lo": 1.0842021724855044e-19,
+     "n": 2000,
+     "share": 0.0
+    },
+    "n": 2000,
+    "start": "2023-06-12",
+    "week": "2023-W24",
+    "word_shift": {
+     "baseline_rate_per_10k": 2.176711548551154,
+     "hi": 1.098966326891804,
+     "index": 0.937601965433151,
+     "lo": 0.7909746744964321,
+     "rate_per_10k": 2.0408890261025996
+    },
+    "word_shift_common": {
+     "baseline_rate_per_10k": 8.79976785217189,
+     "hi": 1.1475816092118474,
+     "index": 1.0322785410270416,
+     "lo": 0.9263277077206167,
+     "rate_per_10k": 9.083811519816662
+    }
+   },
+   {
+    "leftover": {
+     "docs": 0,
+     "hi": 0.001917047311437806,
+     "lo": 1.0842021724855044e-19,
+     "n": 2000,
+     "share": 0.0
+    },
+    "n": 2000,
+    "start": "2023-12-11",
+    "week": "2023-W50",
+    "word_shift": {
+     "baseline_rate_per_10k": 2.176711548551154,
+     "hi": 2.008844548263425,
+     "index": 1.7414587313833025,
+     "lo": 1.4991784989586474,
+     "rate_per_10k": 3.7906533319272766
+    },
+    "word_shift_common": {
+     "baseline_rate_per_10k": 8.79976785217189,
+     "hi": 1.4992770964436246,
+     "index": 1.3765124460021605,
+     "lo": 1.2565737085322692,
+     "rate_per_10k": 12.112989970444305
+    }
+   }
+  ],
+  "weeks": [
+   {
+    "leftover": {
+     "docs": 0,
+     "hi": 0.0016250915926967438,
+     "lo": 0.0,
+     "n": 2360,
+     "share": 0.0
+    },
+    "n": 2360,
+    "start": "2026-09-28",
+    "week": "2026-W40",
+    "word_shift": {
+     "baseline_rate_per_10k": 2.176711548551154,
+     "hi": 0.7304810520975141,
+     "index": 0.6126182393989652,
+     "lo": 0.5044804997326879,
+     "rate_per_10k": 1.3334931965528032
+    },
+    "word_shift_common": {
+     "baseline_rate_per_10k": 8.79976785217189,
+     "hi": 1.240299172879049,
+     "index": 1.1464994258023111,
+     "lo": 1.0524522358053405,
+     "rate_per_10k": 10.088928789708708
+    }
+   }
+  ],
+  "word_list": {
+   "common": [
+    [
+     "potential",
+     "KOBAK"
+    ],
+    [
+     "notably",
+     "KOBAK"
+    ],
+    [
+     "comprehensive",
+     "KOBAK"
+    ],
+    [
+     "findings",
+     "KOBAK"
+    ],
+    [
+     "crucial",
+     "KOBAK"
+    ],
+    [
+     "insight",
+     "KOBAK"
+    ],
+    [
+     "highlight",
+     "KOBAK"
+    ],
+    [
+     "valuable",
+     "KOBAK"
+    ],
+    [
+     "significant",
+     "KOBAK"
+    ]
+   ],
+   "distinctive": [
+    [
+     "delve",
+     "KOBAK"
+    ],
+    [
+     "underscore",
+     "KOBAK"
+    ],
+    [
+     "showcase",
+     "KOBAK"
+    ],
+    [
+     "pivotal",
+     "KOBAK"
+    ],
+    [
+     "intricate",
+     "LIANG"
+    ],
+    [
+     "meticulous",
+     "LIANG"
+    ],
+    [
+     "commendable",
+     "LIANG"
+    ],
+    [
+     "innovative",
+     "LIANG"
+    ],
+    [
+     "versatile",
+     "LIANG"
+    ],
+    [
+     "enhancing",
+     "KOBAK"
+    ]
+   ]
+  }
+ },
+ "validation": {
+  "ai_reference_files": [],
+  "alpha_publishable": false,
+  "alphas": [
+   0.0,
+   0.02,
+   0.05,
+   0.1,
+   0.2,
+   0.3
+  ],
+  "drift_band": {
+   "band": null,
+   "band_common": null,
+   "base_docs": 0,
+   "base_years": "2019-2020",
+   "need_base_docs": 10000,
+   "need_period_docs": 5000,
+   "periods": [
+    {
+     "n": 0,
+     "period": "2021Q1"
+    },
+    {
+     "n": 0,
+     "period": "2021Q2"
+    },
+    {
+     "n": 0,
+     "period": "2021Q3"
+    },
+    {
+     "n": 0,
+     "period": "2021Q4"
+    },
+    {
+     "n": 0,
+     "period": "2022Q1"
+    },
+    {
+     "n": 6422,
+     "period": "2022Q2"
+    },
+    {
+     "n": 20810,
+     "period": "2022Q3"
+    },
+    {
+     "n": 6414,
+     "period": "2022-10"
+    }
+   ],
+   "periods_ready": 0,
+   "ready": false
+  },
+  "generated_at": "2026-10-07T00:10:18Z",
+  "held_out": {
+   "leftover": {
+    "docs": 0,
+    "hi": 0.0004596233250170053,
+    "lo": 0.0,
+    "n": 8354,
+    "share": 0.0
+   },
+   "n_fit": 33646,
+   "n_validation": 8354,
+   "word_shift": {
+    "baseline_rate_per_10k": 2.176711548551154,
+    "hi": 1.1174841272058638,
+    "index": 1.0249093114234005,
+    "lo": 0.9346413819345188,
+    "rate_per_10k": 2.230931934392927
+   },
+   "word_shift_passed": true
+  },
+  "methodology_version": "v1.2",
+  "n_ai_reference": 0,
+  "note": "no AI reference text: alpha checks skipped",
+  "split_rule": "sha256(doc_id) mod 5 == 0 -> validation (20%), else fit; doc_id = sha256(WARC-Record-ID)[:32]",
+  "tolerance": 0.03,
+  "unmapped": 0
+ }
+}
