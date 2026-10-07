@@ -63,7 +63,7 @@
    "periods_ready": 0,
    "ready": false
   },
-  "generated_at": "2026-10-07T00:08:23Z",
+  "generated_at": "2026-10-07T00:12:10Z",
   "latest": {
    "leftover": {
     "docs": 0,
@@ -353,7 +353,7 @@
    "periods_ready": 0,
    "ready": false
   },
-  "generated_at": "2026-10-07T00:10:18Z",
+  "generated_at": "2026-10-07T00:14:03Z",
   "held_out": {
    "leftover": {
     "docs": 0,
