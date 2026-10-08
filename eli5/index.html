@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Explained simply | Dead Internet Tracker</title>
+<meta name="description" content="What the Dead Internet Tracker measures, in plain words: how we look for AI writing in news, what each number means, and how to read it without fooling yourself.">
+<link rel="canonical" href="https://dead-internet.lukiwebco.com/eli5/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Explained simply | Dead Internet Tracker">
+<meta property="og:description" content="What the Dead Internet Tracker measures, in plain words: how we look for AI writing in news, what each number means, and how to read it without fooling yourself.">
+<meta property="og:url" content="https://dead-internet.lukiwebco.com/eli5/">
+<meta property="og:image" content="https://dead-internet.lukiwebco.com/share.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+  <div class="wrap bar">
+    <a class="brand" href="../"><span class="brand-by">LukiWebCo</span> Dead Internet Tracker</a>
+    <nav aria-label="Main">
+      <a href="../">Index</a>
+      <a href="../about/">Method</a>
+      <a href="../eli5/" aria-current="page" title="Explain it like I'm five: the plain-words guide">ELI5</a>
+    </nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+<div class="eli5">
+<h1>Explain it like I&rsquo;m five</h1>
+<p class="lede">The short, plain version of what this site does and how to read it. The full details are on the <a href="../about/">method page</a>.</p>
+
+<section id="question">
+  <h2>The question</h2>
+  <p>Chatbots like ChatGPT can now write a whole news article in seconds. Some websites use them. So we ask a simple question: <strong>how much of the news on the internet is now written by AI, and is that growing?</strong></p>
+  <p>The &ldquo;dead internet&rdquo; idea says the web is slowly filling up with text that no person wrote. We don&rsquo;t assume that is true. We measure it.</p>
+</section>
+
+<section id="soup">
+  <h2>The big idea: taste the soup, don&rsquo;t hunt for the salt</h2>
+  <p>Imagine a big pot of soup. Someone may have added salt. You can&rsquo;t pick out one grain of salt and say &ldquo;that one!&rdquo; But you <em>can</em> taste the whole pot and say &ldquo;this is saltier than last week&rsquo;s soup.&rdquo;</p>
+  <p>We do the same with news. Looking at one article, nobody can be sure whether a robot wrote it, and guessing wrong is unfair to the person who did write it. But across thousands of articles, small habits add up, and you can measure them. So we only ever talk about <strong>the whole pot</strong>: all the articles together, never one article or one website.</p>
+  <p>Our &ldquo;last week&rsquo;s soup&rdquo; is news from <strong>before ChatGPT came out</strong> (before November 2022), when almost no news was written by AI. Everything is compared with that.</p>
+</section>
+
+<section id="where">
+  <h2>Where the articles come from</h2>
+  <p>A non-profit called Common Crawl keeps copies of news websites from all over the world, every day. It&rsquo;s like a giant public library of news. From it we pick English news articles <strong>at random</strong>, like drawing names from a hat, and no single website may give more than a handful:</p>
+  <ul>
+    <li><strong>Every week from now on:</strong> about 3,000 articles.</li>
+    <li><strong>One week per month back to December 2022:</strong> 2,000 articles each, so you can see the years since ChatGPT.</li>
+    <li><strong>2019 to October 2022:</strong> the &ldquo;before&rdquo; soup that everything is compared with.</li>
+  </ul>
+</section>
+
+<section id="methods">
+  <h2>Three ways we look</h2>
+
+  <h3>1. Counting the robot&rsquo;s favourite words</h3>
+  <p>Chatbots have favourite words, the way a friend might say &ldquo;literally&rdquo; all the time. Scientists found that after ChatGPT arrived, words like &ldquo;delve&rdquo;, &ldquo;intricate&rdquo; and &ldquo;showcase&rdquo; suddenly became much more common in science papers.</p>
+  <p>So we count how often such words appear in the news and compare that with before ChatGPT. That comparison is the <strong>word-shift index</strong>:</p>
+  <ul>
+    <li><strong>1.00</strong> means &ldquo;used just as often as before ChatGPT.&rdquo;</li>
+    <li><strong>1.50</strong> means &ldquo;used 50% more often.&rdquo;</li>
+    <li><strong>0.80</strong> means &ldquo;used 20% less often.&rdquo;</li>
+  </ul>
+  <p>We use two word lists, because no single list is perfect:</p>
+  <ul>
+    <li><strong>Science-study words</strong> (&ldquo;delve&rdquo;, &ldquo;intricate&rdquo;) come from published studies. They are well documented, but they were found in science papers, not news, and newer chatbots use some of them less.</li>
+    <li><strong>Common words</strong> (&ldquo;crucial&rdquo;, &ldquo;significant&rdquo;) also rose in those studies, but people use them a lot anyway, so they are a weaker clue.</li>
+    <li>A third list of <strong>news words</strong>, which we learned ourselves by asking chatbots to rewrite real news, is waiting for one more safety check (the &ldquo;wobble&rdquo; check below) before it goes on the chart.</li>
+  </ul>
+  <p>Right now: the science-study words are at <strong>0.69&times;</strong> their before-ChatGPT level in the latest week.</p>
+
+  <h3>2. Finding forgotten leftovers</h3>
+  <p>Sometimes a person copies chatbot text and forgets to delete the robot&rsquo;s own chatter, like &ldquo;As an AI language model&hellip;&rdquo; or &ldquo;Regenerate response&rdquo;. That&rsquo;s a smoking gun. We count articles with these leftovers.</p>
+  <p>This number is a <strong>floor</strong>: the real amount of AI writing is at least this, and almost certainly much more, because careful people delete the leftovers. So far: <strong>1 of 32,360</strong> articles since December 2022.</p>
+
+  <h3>3. Matching against real chatbot writing (still being tested)</h3>
+  <p>We ask several chatbots to write news articles, then check how much today&rsquo;s news &ldquo;looks like&rdquo; their writing versus pre-ChatGPT news. In theory this gives a direct answer like &ldquo;about 8% of articles read like AI.&rdquo;</p>
+  <p>It is <strong>not on the main page yet</strong> because it hasn&rsquo;t passed our own tests: when we hid one chatbot from it and then showed it that chatbot&rsquo;s articles, it missed up to half of them. We&rsquo;d rather show nothing than a number we can&rsquo;t trust. It goes on the page only once it passes every test.</p>
+</section>
+
+<section id="checks">
+  <h2>How we check ourselves</h2>
+  <p>Any measuring tool can fool you. These checks are how we try not to be fooled:</p>
+  <ul>
+    <li><strong>The fuzzy line (range).</strong> Every dot on the chart has a line through it. Because we look at a sample of articles, not all of them, the true value is probably somewhere along that line (95% sure). Short line: confident. Long line: not so sure.</li>
+    <li><strong>The false-alarm check.</strong> We keep some old, pre-ChatGPT articles hidden from the &ldquo;before&rdquo; soup, then measure them as if they were new. They must score 1.00, because no AI wrote them. Latest result: <strong>0.97&times;</strong> (passed).</li>
+    <li><strong>The wobble check (drift band).</strong> News words change even without robots: new topics, new slang, big events. To see how much, we compare 2021 with 2019&ndash;20, before ChatGPT existed. However much the numbers wobbled then is the normal wobble. On the chart it&rsquo;s the shaded strip around 1.00. This check is still being collected, so read small changes with care for now.</li>
+  </ul>
+</section>
+
+<section id="read">
+  <h2>How to read the page without fooling yourself</h2>
+  <ul>
+    <li><strong>Look at the trend, not one dot.</strong> One month can bounce. Several months moving the same way mean much more.</li>
+    <li><strong>If the line through a dot crosses 1.00, there may be no change at all.</strong></li>
+    <li><strong>A number going down does not prove less AI.</strong> Chatbots change their habits: after people mocked &ldquo;delve&rdquo;, newer models used it less. That&rsquo;s why we use more than one word list.</li>
+    <li><strong>A number going up does not prove AI either,</strong> on its own. People copy fashionable words too. Trust it more when several signals agree and it stays outside the wobble strip.</li>
+    <li><strong>The leftovers number is a minimum,</strong> not the answer.</li>
+    <li><strong>None of this can say whether one article or one website used AI.</strong> Please don&rsquo;t use it to accuse anyone. It measures the soup, not the spoon.</li>
+  </ul>
+</section>
+
+<section id="faq">
+  <h2>Quick questions</h2>
+  <h3>So, is the internet dead?</h3>
+  <p>We can&rsquo;t say that. The clues suggest AI-style wording has grown in English news since ChatGPT, but none of our methods can yet give a trustworthy &ldquo;X% of news is AI&rdquo; number. That&rsquo;s exactly what this site is for: to keep watching, week after week, with the same method, and to tell you how sure we are.</p>
+  <h3>Why not just use an &ldquo;AI detector&rdquo;?</h3>
+  <p>Detectors that judge single articles make mistakes, and those mistakes land on real writers, often people writing in their second language. Good ones also cost money. We use free methods that work on the whole crowd of articles, and we publish how sure we are.</p>
+  <h3>Can I check my own article here?</h3>
+  <p>No. On purpose. We never label single articles.</p>
+  <h3>Does this cover the whole internet?</h3>
+  <p>No: English news websites only, for now. Other languages and other kinds of sites may come in later versions.</p>
+  <h3>Can I use the numbers?</h3>
+  <p>Yes. They&rsquo;re free to download on the <a href="../#data">main page</a>; please credit the tracker and the method version (v1.2).</p>
+</section>
+
+<section id="words">
+  <h2>Little dictionary</h2>
+  <dl class="facts">
+    <div><dt>Baseline</dt><dd>News from before ChatGPT (2019 to October 2022). The &ldquo;before&rdquo; soup.</dd></div>
+    <div><dt>Index</dt><dd>Now compared with before. 1.00 = no change.</dd></div>
+    <div><dt>Range</dt><dd>The line through each dot: where the true value probably is.</dd></div>
+    <div><dt>Drift band</dt><dd>The normal wobble of news words, measured before ChatGPT existed.</dd></div>
+    <div><dt>Floor</dt><dd>A &ldquo;at least this much&rdquo; number. The truth can be higher.</dd></div>
+    <div><dt>Population-level</dt><dd>About all the articles together, never about one.</dd></div>
+  </dl>
+</section>
+
+<p><a href="../">See the numbers</a> &middot; <a href="../about/">Read the full method</a></p>
+</div>
+<style>
+.eli5 p, .eli5 li, .eli5 dl { max-width: 46rem; }
+.eli5 li { margin: 0.35rem 0; }
+</style>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <p>Population-level estimates only; no individual document is labelled. <a href="../about/">How this works</a> &middot; <a href="../eli5/">The simple version</a></p>
+    <p>Updated 2026-10-08 (UTC). A <span class="brand-by">LukiWebCo</span> project.</p>
+  </div>
+</footer>
+</body>
+</html>
