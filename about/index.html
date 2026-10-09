@@ -52,6 +52,11 @@
   <p><strong>Leftover-phrase floor.</strong> The share of documents containing text a person pasted without reading, such as &ldquo;As an AI language model&rdquo; or &ldquo;Regenerate response&rdquo;. It is a minimum. Most AI text has no such trace, so the true share is higher by an unknown amount. Such leftovers turn out to be very rare in news: a search of the first 8,835 post-ChatGPT articles for 18 candidate phrases found none, so the page pools every published week to give the tightest honest upper bound rather than a weekly figure that is always zero.</p>
 </section>
 
+<section id="populations">
+  <h2>Beyond news</h2>
+  <p>Each population has its own pre-ChatGPT baseline, hold-out and drift band, and is never pooled with another. Order chosen by the owner on 2026-10-08: <strong>forums</strong> first (Hacker News comments and text posts through its public search API: random 5-minute windows inside each week, at least 80 words, English, at most 3 texts per author a week; author names are never stored), and <strong>Stack Overflow</strong> answers (Stack Exchange API: random 30-minute windows, code removed; the site banned AI-written answers in December 2022 and its volume fell, so that population itself changed); then <strong>scholarly papers</strong>: arXiv abstracts by week of first submission, leaving out of the baseline any paper revised on or after 2022-11-01 (arXiv serves the latest abstract; this keeps post-ChatGPT text out of the baseline, but it also favours papers that were never revised), with PubMed next; then the <strong>wider web</strong> from Common Crawl, by kind of site.</p>
+</section>
+
 <section id="not-measured">
   <h2>What is not measured</h2>
   <ul>
@@ -65,6 +70,7 @@
 <section id="changes">
   <h2>Changes</h2>
   <ul>
+    <li><strong>2026-10-08:</strong> forums (Hacker News) collection started as the second population; complaint sources collected for a fourth word list (called-out words).</li>
     <li><strong>2026-10-06:</strong> monthly series since December 2022 added to the page (2,000 articles a month); weekly sample set to 3,000 articles (about 1,000 English news sites appear in CC-NEWS a week, and no site may give more than 5); chatbot leftovers pooled across weeks; both word lists charted; data downloads; false-alarm check published.</li>
     <li><strong>v1.2, 2026-10-05:</strong> a raw copy of every sampled record is kept; document ids come from the record id; one pre-ChatGPT article in five is held out for checks; drift band.</li>
     <li><strong>v1.1, 2026-10-03:</strong> English only; pre-ChatGPT baseline collected back towards 2019; word-shift index and leftover floor.</li>

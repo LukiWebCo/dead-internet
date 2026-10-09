@@ -73,16 +73,27 @@
     <li><strong>Science-study words</strong> (&ldquo;delve&rdquo;, &ldquo;intricate&rdquo;) come from published studies. They are well documented, but they were found in science papers, not news, and newer chatbots use some of them less.</li>
     <li><strong>Common words</strong> (&ldquo;crucial&rdquo;, &ldquo;significant&rdquo;) also rose in those studies, but people use them a lot anyway, so they are a weaker clue.</li>
     <li>A third list of <strong>news words</strong>, which we learned ourselves by asking chatbots to rewrite real news, is waiting for one more safety check (the &ldquo;wobble&rdquo; check below) before it goes on the chart.</li>
+    <li>A fourth list, <strong>called-out words</strong>, is being built from what people flag: texts that Wikipedia editors tagged as &ldquo;suspected AI-generated&rdquo; and comments on Hacker News that someone answered with &ldquo;this reads like ChatGPT&rdquo;. It shows up once it passes the same checks.</li>
   </ul>
-  <p>Right now: the science-study words are at <strong>0.69&times;</strong> their before-ChatGPT level in the latest week.</p>
+  <p>Right now: the science-study words are at <strong>0.68&times;</strong> their before-ChatGPT level in the latest week.</p>
 
   <h3>2. Finding forgotten leftovers</h3>
   <p>Sometimes a person copies chatbot text and forgets to delete the robot&rsquo;s own chatter, like &ldquo;As an AI language model&hellip;&rdquo; or &ldquo;Regenerate response&rdquo;. That&rsquo;s a smoking gun. We count articles with these leftovers.</p>
-  <p>This number is a <strong>floor</strong>: the real amount of AI writing is at least this, and almost certainly much more, because careful people delete the leftovers. So far: <strong>1 of 32,360</strong> articles since December 2022.</p>
+  <p>This number is a <strong>floor</strong>: the real amount of AI writing is at least this, and almost certainly much more, because careful people delete the leftovers. So far: <strong>2 of 60,360</strong> articles since December 2022.</p>
 
   <h3>3. Matching against real chatbot writing (still being tested)</h3>
   <p>We ask several chatbots to write news articles, then check how much today&rsquo;s news &ldquo;looks like&rdquo; their writing versus pre-ChatGPT news. In theory this gives a direct answer like &ldquo;about 8% of articles read like AI.&rdquo;</p>
   <p>It is <strong>not on the main page yet</strong> because it hasn&rsquo;t passed our own tests: when we hid one chatbot from it and then showed it that chatbot&rsquo;s articles, it missed up to half of them. We&rsquo;d rather show nothing than a number we can&rsquo;t trust. It goes on the page only once it passes every test.</p>
+</section>
+
+<section id="beyond">
+  <h2>Why only news? (Not for long)</h2>
+  <p>News sites are polished: editors, style guides, and often an early, careful use of AI that is hard to spot. Other places may have started using AI later, or more openly. So we are adding more &ldquo;soups&rdquo;, each compared with its own past, never mixed together:</p>
+  <ul>
+    <li><strong>Forums:</strong> Hacker News comments and Stack Overflow answers, from 2019 to today. Stack Overflow&rsquo;s &ldquo;before&rdquo; soup is still being collected (4 of 20 weeks).</li>
+    <li><strong>Scholarly papers (now collecting):</strong> new research abstracts on arXiv. This is where the science word list came from, so it also tests our method against published studies.</li>
+    <li><strong>Next:</strong> PubMed (medical research), then the wider web, sorted by kind of site.</li>
+  </ul>
 </section>
 
 <section id="checks">
