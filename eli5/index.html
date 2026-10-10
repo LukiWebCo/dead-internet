@@ -75,11 +75,11 @@
     <li>A third list of <strong>news words</strong>, which we learned ourselves by asking chatbots to rewrite real news, is waiting for one more safety check (the &ldquo;wobble&rdquo; check below) before it goes on the chart.</li>
     <li>A fourth list, <strong>called-out words</strong>, is being built from what people flag: texts that Wikipedia editors tagged as &ldquo;suspected AI-generated&rdquo; and comments on Hacker News that someone answered with &ldquo;this reads like ChatGPT&rdquo;. It shows up once it passes the same checks.</li>
   </ul>
-  <p>Right now: the science-study words are at <strong>0.68&times;</strong> their before-ChatGPT level in the latest week.</p>
+  <p>Right now: the science-study words are at <strong>0.73&times;</strong> their before-ChatGPT level in the latest week.</p>
 
   <h3>2. Finding forgotten leftovers</h3>
   <p>Sometimes a person copies chatbot text and forgets to delete the robot&rsquo;s own chatter, like &ldquo;As an AI language model&hellip;&rdquo; or &ldquo;Regenerate response&rdquo;. That&rsquo;s a smoking gun. We count articles with these leftovers.</p>
-  <p>This number is a <strong>floor</strong>: the real amount of AI writing is at least this, and almost certainly much more, because careful people delete the leftovers. So far: <strong>2 of 60,360</strong> articles since December 2022.</p>
+  <p>This number is a <strong>floor</strong>: the real amount of AI writing is at least this, and almost certainly much more, because careful people delete the leftovers. So far: <strong>2 of 80,360</strong> articles since December 2022.</p>
 
   <h3>3. Matching against real chatbot writing (still being tested)</h3>
   <p>We ask several chatbots to write news articles, then check how much today&rsquo;s news &ldquo;looks like&rdquo; their writing versus pre-ChatGPT news. In theory this gives a direct answer like &ldquo;about 8% of articles read like AI.&rdquo;</p>
@@ -90,7 +90,7 @@
   <h2>Why only news? (Not for long)</h2>
   <p>News sites are polished: editors, style guides, and often an early, careful use of AI that is hard to spot. Other places may have started using AI later, or more openly. So we are adding more &ldquo;soups&rdquo;, each compared with its own past, never mixed together:</p>
   <ul>
-    <li><strong>Forums:</strong> Hacker News comments and Stack Overflow answers, from 2019 to today. Stack Overflow&rsquo;s &ldquo;before&rdquo; soup is still being collected (4 of 20 weeks).</li>
+    <li><strong>Forums:</strong> Hacker News comments and Stack Overflow answers, from 2019 to today. Stack Overflow&rsquo;s &ldquo;before&rdquo; soup is still being collected (8 of 20 weeks).</li>
     <li><strong>Scholarly papers (now collecting):</strong> new research abstracts on arXiv. This is where the science word list came from, so it also tests our method against published studies.</li>
     <li><strong>Next:</strong> PubMed (medical research), then the wider web, sorted by kind of site.</li>
   </ul>
@@ -101,7 +101,7 @@
   <p>Any measuring tool can fool you. These checks are how we try not to be fooled:</p>
   <ul>
     <li><strong>The fuzzy line (range).</strong> Every dot on the chart has a line through it. Because we look at a sample of articles, not all of them, the true value is probably somewhere along that line (95% sure). Short line: confident. Long line: not so sure.</li>
-    <li><strong>The false-alarm check.</strong> We keep some old, pre-ChatGPT articles hidden from the &ldquo;before&rdquo; soup, then measure them as if they were new. They must score 1.00, because no AI wrote them. Latest result: <strong>0.97&times;</strong> (passed).</li>
+    <li><strong>The false-alarm check.</strong> We keep some old, pre-ChatGPT articles hidden from the &ldquo;before&rdquo; soup, then measure them as if they were new. They must score 1.00, because no AI wrote them. Latest result: <strong>0.99&times;</strong> (passed).</li>
     <li><strong>The wobble check (drift band).</strong> News words change even without robots: new topics, new slang, big events. To see how much, we compare 2021 with 2019&ndash;20, before ChatGPT existed. However much the numbers wobbled then is the normal wobble. On the chart it&rsquo;s the shaded strip around 1.00. This check is still being collected, so read small changes with care for now.</li>
   </ul>
 </section>
@@ -154,7 +154,7 @@
 <footer class="site">
   <div class="wrap">
     <p>Population-level estimates only; no individual document is labelled. <a href="../about/">How this works</a> &middot; <a href="../eli5/">The simple version</a></p>
-    <p>Updated 2026-10-08 (UTC). A <span class="brand-by">LukiWebCo</span> project.</p>
+    <p>Updated 2026-10-09 (UTC). A <span class="brand-by">LukiWebCo</span> project.</p>
   </div>
 </footer>
 </body>
